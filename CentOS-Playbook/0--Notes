@@ -1,0 +1,17 @@
+1--service.yml
+  Install httpdservice on webservers nodes.
+  Install mariadbservice on prodnodes.
+  Make sure services are started and enabled.
+
+2--user.yml
+   create user on all managed hosts with below information.
+     Use username as 'ravi'.
+     Set password as 'password'.
+     Password must be encrypted with Sha512.
+
+3--file.yml
+   create file ‘/root/inventoty.txt’ on all managed nodes.
+     User and group ownership must be set to mark.
+     Configure full permissions for user, read/write at group level and 
+          no permissions for others on this file.
+     Set GiD bit.

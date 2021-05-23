@@ -1,0 +1,12 @@
+---
+-
+  hosts: all
+  become: True
+  gather_facts: False
+  tasks:
+    -name: Creating user
+       user:
+         name: ravi
+         password: “{{ ‘password’ | password_hash(‘sha512’) }}”
+         state: present
+...
