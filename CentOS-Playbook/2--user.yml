@@ -5,8 +5,8 @@
   gather_facts: False
   tasks:
     - name: Creating user
-        user:
+      user:
           name: ravi
-          password: “{{ ‘password’ | password_hash(‘sha512’) }}”
+          password: "{{ 'password' | password_hash('sha512') }}"
           state: present
 ...
