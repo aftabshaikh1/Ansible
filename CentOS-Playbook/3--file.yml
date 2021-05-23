@@ -4,11 +4,11 @@
   become: True
   gather_facts: False
   tasks:
-    -name: Creating file, setting permissions and gid bit
+    - name: Creating file, setting permissions and gid bit
       file:
         path: /root/inventory.txt
         owner: ravi
         group: ravi
-        mode: ‘2760’
+        mode: '2760'
         state: touch
 ...
