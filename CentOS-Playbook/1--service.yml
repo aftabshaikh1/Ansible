@@ -3,12 +3,12 @@
   hosts: webservers
   become: True
   tasks:
-    -name: Installing httpdservice
-     yum:
+    - name: Installing httpdservice
+      yum:
         name: httpd
         state: present
-    -name: Starting and enabling httpdservice
-     service:
+    - name: Starting and enabling httpdservice
+      service:
         name: httpd
         state: started
         enabled: yes
@@ -18,14 +18,14 @@
   hosts: prod
   become: True
   tasks:
-    -name: Installing mariadbservice
-     yum:
+    - name: Installing mariadbservice
+      yum:
         name: 
           -mariadb-server
           -mariadb-common
         state: present
-    -name: Starting and enabling mariadbservice
-     service:
+    - name: Starting and enabling mariadbservice
+      service:
         name: mariadb
         state: started
         enabled: yes
