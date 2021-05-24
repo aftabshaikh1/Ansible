@@ -21,8 +21,8 @@
     - name: Installing mariadbservice
       yum:
         name: 
-          -mariadb-server
-          -mariadb-common
+          - mariadb-server
+          - mariadb-common
         state: present
     - name: Starting and enabling mariadbservice
       service:
