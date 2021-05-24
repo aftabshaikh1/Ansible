@@ -1,0 +1,23 @@
+---
+-
+  hosts: all
+  become: True
+  gather_facts: False
+  tasks:
+    - name: Creating exception in firewalld
+      firewalld:
+        source: 192.0.2.0/24
+        zone: public
+        permanent: yes
+        state: enabled
+    - name: Creating exception in firewalld
+      firewalld:
+        service: https
+        permanent: yes
+        zone: public
+        state: enabled
+    - name: reload the firewall
+      service:
+        name: firewalld
+        state: reloaded
+...
