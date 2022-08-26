@@ -13,3 +13,4 @@ m3 ansible_host=server3.something.com ansible_connection=ssh ansible_python_inte
 
 
 
+ansible_python_interpreter="/usr/bin/env python"
